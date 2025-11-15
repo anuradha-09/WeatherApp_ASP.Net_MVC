@@ -27,6 +27,3 @@ A simple **ASP.NET MVC** web application that allows users to search for the cur
 5. Run the project.
 6. Enter a city name and view weather details.
 
-## Notes
-- Internet connection required for fetching weather data.
-- Input field automatically capitalizes the first letter of the city.
