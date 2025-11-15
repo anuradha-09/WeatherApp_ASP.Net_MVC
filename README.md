@@ -27,3 +27,5 @@ A simple **ASP.NET MVC** web application that allows users to search for the cur
 5. Run the project.
 6. Enter a city name and view weather details.
 
+![Weather App Screenshot](Images/screenshot.png)
+
