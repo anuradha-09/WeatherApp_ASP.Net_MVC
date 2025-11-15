@@ -1,0 +1,38 @@
+﻿@model WeatherAppMVC.Models.Weather
+
+@{
+    ViewData["Title"] = "Weather App";
+}
+
+<div class="container" style="text-align:center; margin-top: 40px; background-color:#B8E1C8;border-radius: 12px; padding:20px; font-family:'Poor Richard';">
+<h2>Weather App</h2>
+
+    <form asp-action="Index" method="post" autocomplete="off">
+        <input type="text" name="cityName" placeholder="Enter city name" style="text-transform: capitalize;" required />
+    <button type="submit"> Search </button>
+</form>
+</div>
+@if (Model != null)
+{
+    <br />
+    <div style="text-align:center; background-color:#F8D9C0; border-radius: 12px; ">
+        <h3 style="font-family:Algerian;">@Model.City, @Model.Country</h3>
+    </div>
+   
+        <div style="text-align:center;">
+        <span style="border: 5px solid #AEC6CF; border-radius: 12px;  padding:20px; display:inline-block; margin:5px;font-family:'Poor Richard';">Temperature: @Model.Temperature °C</span>
+        <span style="border: 5px solid #4A90E2;  border-radius: 12px; padding:20px; display:inline-block; margin:5px;font-family:'Poor Richard';">Humidity: @Model.Humidity %</span>
+        <span style="border: 5px solid #F7B2B0; border-radius: 12px;  padding:20px; display:inline-block; margin:5px;font-family:'Poor Richard';">Pressure: @Model.Pressure hPa</span>
+        <span style="border: 5px solid #555;  border-radius: 12px; padding:20px; display:inline-block; margin:5px;font-family:'Poor Richard';">Weather Condition: @Model.WeatherCondition</span>
+        <span style="border: 5px solid #ccc;  border-radius: 12px; padding:20px; display:inline-block; margin:5px;font-family:'Poor Richard';">Wind Speed: @Model.WindSpeed m/s</span>
+        <span style="border: 5px solid #D7BCE8;  border-radius: 12px; padding:20px; display:inline-block; margin:5px;font-family:'Poor Richard';">Timezone: @Model.Timezone</span>
+        <span style="border: 5px solid #F7D1D0; border-radius: 12px;  padding:20px; display:inline-block; margin:5px;font-family:'Poor Richard';">Current Local Time: @Model.CityTime</span>
+        </div>
+
+}
+
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
