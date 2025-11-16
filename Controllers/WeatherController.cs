@@ -27,7 +27,7 @@ namespace WeatherAppMVC.Controllers
             if (string.IsNullOrEmpty(cityName))
                 return View();
 
-            string apiKey = "ce3d69c489bdc9b247024d75e1cf03be"; // Replace with your OpenWeatherMap API key
+            string apiKey = "******************************"; // Replace with your OpenWeatherMap API key
             string url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}&units=metric";
 
             try
